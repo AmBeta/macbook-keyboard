@@ -2,6 +2,8 @@
 
 A tiny library to display a reactive macbook keyboard on screen.
 
+![screenshot](./demo/screenshot.jpg)
+
 ## Feature
 
 - vanilla, no framework required
@@ -12,7 +14,14 @@ A tiny library to display a reactive macbook keyboard on screen.
 ## Usage
 
 ```javascript
-MacbookKeyboard();
+// create an instance by invoking the factory method
+const kbd = MacbookKeyboard({ theme: 'dark' });
+// toggle the pressed status of key 'Shift'
+kbd.toggle('Shift');
+// get the pressed status of key 'Shift'
+kbd.check('Shift');
+// reset pressed status for all keys
+kbd.clear();
 ```
 
 ## Options
